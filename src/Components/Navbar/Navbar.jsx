@@ -7,9 +7,9 @@ const Navbar = () => {
     return (
         <div className="side-nav">
             <div className="nav-bar">
-                <li className="nav-item"><Link to="/"><BiHomeAlt /></Link></li>
-                <li className="nav-item"><Link to="/Add"><BiCalendarPlus /></Link></li>
-                <li className="nav-item"><Link to="/List"><FaCalendarAlt /></Link></li>
+                <li className="nav-item"><Link to="/" style={{ color: '#FFF' }}><BiHomeAlt /></Link></li>
+                <li className="nav-item"><Link to="/Add" style={{ color: '#FFF' }}><BiCalendarPlus /></Link></li>
+                <li className="nav-item"><Link to="/List" style={{ color: '#FFF' }}><FaCalendarAlt /></Link></li>
 
 
             </div>
