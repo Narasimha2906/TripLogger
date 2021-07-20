@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AddComponent from './Components/AddComponent';
+import HomeComponent from './Components/HomeComponent';
+import ListComponent from './Components/ListComponent';
 
 function App() {
+  const [trip, setTrip] = useState([]);
+
+  function addTrip(newTrip) {
+    setTrip(prevTrip => {
+      return [...prevTrip, newTrip];
+    });
+    console.log(trip);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomeComponent trips={trip}/>
+      <AddComponent onAdd={addTrip}/>
+      <ListComponent triplist={trip}/>
     </div>
   );
 }
