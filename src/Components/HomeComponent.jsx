@@ -6,9 +6,9 @@ class HomeComponent extends Component {
 
 
     render() {
-        var tropic = this.props.trips.filter((trip) => { if (trip.type === 'Tropic') return trip });
-        var trek = this.props.trips.filter((trip) => { if (trip.type === 'Trek') return trip });
-        var club = this.props.trips.filter((trip) => { if (trip.type === 'Club') return trip });
+        var tropic = this.props.trips.filter(trip => trip.type === 'Tropic');
+        var trek = this.props.trips.filter(trip => trip.type === 'Trek');
+        var club = this.props.trips.filter(trip => trip.type === 'Club');
 
         return (
             <>
